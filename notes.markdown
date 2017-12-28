@@ -1,36 +1,39 @@
 
 # Dec 28, 2017
 
-Conductivity before decoupling:
+- Conductivity before decoupling:
 
 ![](./imgs/conductivity_before_decoupling.png)
 
-Initial conductivity calibration:
+- Initial conductivity calibration. Green line is a linear fit ing gnuplot, y=m*x+b, where:
+         
+b = 0.15355 +/- 0.002673 (1.741%)
+c = 1956.42 +/- 6.986 (0.3571%)
 
 ![](./imgs/conductivity_calibration.png)
 
 
-Conductiving after decoupling via radio:
+- Conductiving after decoupling via radio:
 
 ![](./imgs/conductivity_decoupled.png)
 
 
-Replacing conductivity probe in new solution:
+- Replacing conductivity probe in new solution:
 
 ![](./imgs/conductivity_progress_2017_12_28.png)
 
 
-Initial pressure comparison: 
+- Initial pressure comparison: 
 
 ![](./imgs/pressure_comparison.png)
 
 
-Pressure comparison, round 2:
+- Pressure comparison, round 2:
 
 ![](./imgs/pressure_comparison_round_2.png)
 
 
-Corrected pressure measurements:
+- Corrected pressure measurements:
 ![](./imgs/pressure_corrected_round_2.png)
 
 - Code for feather m0 lora -- provide square wave @ ~20 kHz for conductivity circuit (freq chosen to match historical choice, not necessarily optimal) -- measure temperature via thermistor -- then transmit via json packet (we're using radio so that we decouple any odd power source couplings as seemed to happen over usb): [Conductivity_temp_m0_lora_transmit_json.ino](https://gist.github.com/dwblair/2b517428a16a0688a78964487ea80d20)

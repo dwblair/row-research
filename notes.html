@@ -1,36 +1,49 @@
 <h1 id="dec-28-2017">Dec 28, 2017</h1>
-<p>Conductivity before decoupling:</p>
+<ul>
+<li>Conductivity before decoupling:</li>
+</ul>
 <div class="figure">
 <img src="./imgs/conductivity_before_decoupling.png" />
 
 </div>
-<p>Initial conductivity calibration:</p>
+<ul>
+<li>Initial conductivity calibration. Green line is a linear fit ing gnuplot, y=m*x+b, where:</li>
+</ul>
+<p>b = 0.15355 +/- 0.002673 (1.741%) c = 1956.42 +/- 6.986 (0.3571%)</p>
 <div class="figure">
 <img src="./imgs/conductivity_calibration.png" />
 
 </div>
-<p>Conductiving after decoupling via radio:</p>
+<ul>
+<li>Conductiving after decoupling via radio:</li>
+</ul>
 <div class="figure">
 <img src="./imgs/conductivity_decoupled.png" />
 
 </div>
-<p>Replacing conductivity probe in new solution:</p>
+<ul>
+<li>Replacing conductivity probe in new solution:</li>
+</ul>
 <div class="figure">
 <img src="./imgs/conductivity_progress_2017_12_28.png" />
 
 </div>
-<p>Initial pressure comparison:</p>
+<ul>
+<li>Initial pressure comparison:</li>
+</ul>
 <div class="figure">
 <img src="./imgs/pressure_comparison.png" />
 
 </div>
-<p>Pressure comparison, round 2:</p>
+<ul>
+<li>Pressure comparison, round 2:</li>
+</ul>
 <div class="figure">
 <img src="./imgs/pressure_comparison_round_2.png" />
 
 </div>
-<p>Corrected pressure measurements: <img src="./imgs/pressure_corrected_round_2.png" /></p>
 <ul>
+<li><p>Corrected pressure measurements: <img src="./imgs/pressure_corrected_round_2.png" /></p></li>
 <li><p>Code for feather m0 lora -- provide square wave @ ~20 kHz for conductivity circuit (freq chosen to match historical choice, not necessarily optimal) -- measure temperature via thermistor -- then transmit via json packet (we're using radio so that we decouple any odd power source couplings as seemed to happen over usb): <a href="https://gist.github.com/dwblair/2b517428a16a0688a78964487ea80d20">Conductivity_temp_m0_lora_transmit_json.ino</a></p></li>
 <li><p>Previous code that simply shows that we can combine pwm and lora code (there was a conflict with a timer function in an earlier version). To do: 'start' and 'stop' the timer so that we are not always pulsing the solution (avoid polarization effects); dial in arbitrary frequency via a nice function with a 'freq' parameter: <a href="https://gist.github.com/dwblair/c448957f44c1a48607a121f1aecbbcc7">Combining lora and pwm</a></p></li>
 <li><p>Lora receive code that takes in packets and sends them over serial. Useful for putting lora feather m0 on USB port and using it as a 'passthrough': <a href="https://gist.github.com/dwblair/d912583478ffd3f4efd28e238f1005e3">m0_lora_receive.ino</a></p></li>
