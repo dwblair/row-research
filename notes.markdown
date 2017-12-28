@@ -33,15 +33,15 @@ Pressure comparison, round 2:
 Corrected pressure measurements:
 ![](./imgs/pressure_corrected_round_2.png)
 
-[Conductivity_temp_m0_lora_transmit_json.ino](https://gist.github.com/dwblair/2b517428a16a0688a78964487ea80d20)
+- Code for feather m0 lora -- provide square wave @ ~20 kHz for conductivity circuit (freq chosen to match historical choice, not necessarily optimal) -- measure temperature via thermistor -- then transmit via json packet (we're using radio so that we decouple any odd power source couplings as seemed to happen over usb): [Conductivity_temp_m0_lora_transmit_json.ino](https://gist.github.com/dwblair/2b517428a16a0688a78964487ea80d20)
 
-[Combining lora and pwm](https://gist.github.com/dwblair/c448957f44c1a48607a121f1aecbbcc7)
+- Previous code that simply shows that we can combine pwm and lora code (there was a conflict with a timer function in an earlier version).  To do:  'start' and 'stop' the timer so that we are not always pulsing the solution (avoid polarization effects); dial in arbitrary frequency via a nice function with a 'freq' parameter: [Combining lora and pwm](https://gist.github.com/dwblair/c448957f44c1a48607a121f1aecbbcc7)
 
-[m0_lora_receive.ino](https://gist.github.com/dwblair/d912583478ffd3f4efd28e238f1005e3)
+- Lora receive code that takes in packets and sends them over serial. Useful for putting lora feather m0 on USB port and using it as a 'passthrough': [m0_lora_receive.ino](https://gist.github.com/dwblair/d912583478ffd3f4efd28e238f1005e3)
 
-[row_depth_sensor_ms5837.ino](https://gist.github.com/dwblair/cdbe6cdaf3c83865badefdc39568a504)
+- Code for depth sensor using ms5837 and transmitting over max485 chip: [row_depth_sensor_ms5837.ino](https://gist.github.com/dwblair/cdbe6cdaf3c83865badefdc39568a504)
 
-[row_bme280_ambient_pressure_sensor.ino](https://gist.github.com/dwblair/602192bfc65250a26da9f316b5d9a4b5)
+- Code for ambient pressure and temp sensor, useful for compensating pressure fluctuations: [row_bme280_ambient_pressure_sensor.ino](https://gist.github.com/dwblair/602192bfc65250a26da9f316b5d9a4b5)
 
 I unified the scripts for pulling in bucket pressure sensor and ambient pressure sensor data, so that they had identical timestamps, so that I could just subtract one from the other as a correction (see attached graphs.  I tried to keep the y-axis scale the same for all graphs, and use a similar visual metric, so you can assess the relative correction.)
 
