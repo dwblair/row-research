@@ -33,6 +33,15 @@ Pressure comparison, round 2:
 Corrected pressure measurements:
 ![](./imgs/pressure_corrected_round_2.png)
 
+[Conductivity_temp_m0_lora_transmit_json.ino](https://gist.github.com/dwblair/2b517428a16a0688a78964487ea80d20)
+
+[Combining lora and pwm](https://gist.github.com/dwblair/c448957f44c1a48607a121f1aecbbcc7)
+
+[m0_lora_receive.ino](https://gist.github.com/dwblair/d912583478ffd3f4efd28e238f1005e3)
+
+[row_depth_sensor_ms5837.ino](https://gist.github.com/dwblair/cdbe6cdaf3c83865badefdc39568a504)
+
+[row_bme280_ambient_pressure_sensor.ino](https://gist.github.com/dwblair/602192bfc65250a26da9f316b5d9a4b5)
 
 I unified the scripts for pulling in bucket pressure sensor and ambient pressure sensor data, so that they had identical timestamps, so that I could just subtract one from the other as a correction (see attached graphs.  I tried to keep the y-axis scale the same for all graphs, and use a similar visual metric, so you can assess the relative correction.)
 
