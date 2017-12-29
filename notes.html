@@ -59,7 +59,7 @@
 <li>anchor both ambient sensor and the water sensor</li>
 <li>account for evaporation by measuring the water height independently.</li>
 </ul>
-<p>More PVC is currently being sourced at Home Depot.</p>
+<p>More PVC is currently being sourced at Home Depot:</p>
 <p><img src="./imgs/pooch_s.jpg"></p>
 <h1 id="conductivity">Conductivity</h1>
 <p><img src="./imgs/probe_design_s.png"></p>
@@ -76,6 +76,7 @@
 <p>Ultimately, the most significant source of drift seemed to be due to electrical coupling with 'house power', which had significant noise.</p>
 <p>The setup was then placed on battery power, and data was transmitted over radio. This resulted in a significant reduction in noise, resulting in a very stable conductivity signal:</p>
 <p><img src="./imgs/conductivity_decoupled.png" width=1000></p>
+<p>(Note that the x-axis unit is time in hours.)</p>
 <p>The effective ADC resolution for this setup was about 1000 counts (the ADC could in principle range from &quot;zero conductivity&quot; at ~ 2000 ADU, to &quot;maximum conductivity&quot; at ~ 3000 ADU). The standard deviation over about 13 hours was ~ 0.5 ADU -- resulting in an error bar of about 0.05% of the effective measurement resolution.</p>
 <h2 id="calibration">Calibration</h2>
 <p>The conductivity sensor was then calibrated using solutions at 1413 uS/cm, 2000 uS/cm, and 3000 uS/cm:</p>

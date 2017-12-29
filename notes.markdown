@@ -127,6 +127,8 @@ The setup was then placed on battery power, and data was transmitted over radio.
 
 <img src="./imgs/conductivity_decoupled.png" width=1000>
 
+(Note that the x-axis unit is time in hours.)
+
 The effective ADC resolution for this setup was about 1000 counts (the ADC could in principle range from "zero conductivity" at ~ 2000 ADU, to "maximum conductivity" at ~ 3000 ADU). The standard deviation over about 13 hours was ~ 0.5 ADU -- resulting in an error bar of about 0.05% of the effective measurement resolution.
 
 ## Calibration
