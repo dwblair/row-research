@@ -99,6 +99,10 @@ In order to more precisely assess the behavior of the pressure sensor, we will n
 - anchor both ambient sensor and the water sensor
 - account for evaporation by measuring the water height independently.
 
+More PVC is currently being sourced at Home Depot:
+
+<img src="./imgs/pooch_s.jpg">
+
 # Conductivity
 
 <img src="./imgs/probe_design_s.png">
