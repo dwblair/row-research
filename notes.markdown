@@ -1,11 +1,14 @@
+[Notes written up Dec 29, 2017]
 
-# Dec 29, 2017
 
-## Pressure and Depth
+- [Depth](#Depth)
+- [Conductivity](#Conductivity)
+
+#Depth
 
 <img src="./imgs/depth_puck_s.jpg">
 
-### Background
+## Background
 
 We're currently in possession of the Blue Robotics pressure sensor useful for the 300 m depth range [REF].  
 
@@ -28,7 +31,7 @@ So: the important questions seem to be:
 - How much does ambient pressure affect the measurement?
 
 
-## Initial test
+### Initial test
 
 The first thing to do was to simply place the depth sensor in a bucket.
 
@@ -56,7 +59,7 @@ Notes:
 
 - We notice that the qualitative behavior and absolute difference in pressure values track very well across both the ambient and water probe pressure values.
 
-## Ambient correction
+### Ambient correction
 
 Correcting the intial experiment was inconvenient -- two separate data streams were collected, resulting in timestamps that different slightly between the two signals.  So, data capture was consolidated, aligning timestamps, facilitating ambient pressure compensation.
 
@@ -100,7 +103,7 @@ In order to more precisely assess the behavior of the pressure sensor, we will n
 - anchor both ambient sensor and the water sensor
 - account for evaporation by measuring the water height independently.
 
-# Conductivity
+#Conductivity
 
 <img src="./imgs/probe_design_s.png">
 
